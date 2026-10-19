@@ -45,6 +45,17 @@ if (process.env.NODE_ENV !== 'test') {
   app.use(morgan('dev'));
 }
 
+// Root landing endpoint
+app.get('/', (req, res) => {
+  res.status(200).json({
+    name: 'Digital Contact Manager API',
+    status: 'online',
+    version: '1.0.0',
+    health: '/api/health',
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.status(200).json({
