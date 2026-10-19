@@ -1,6 +1,17 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+let rawBaseUrl = import.meta.env.VITE_API_BASE_URL || '';
+
+// Automatic fallback: If placeholder URL or empty in production, route to live Render backend
+if (!rawBaseUrl || rawBaseUrl.includes('your-backend-url')) {
+  if (import.meta.env.PROD) {
+    rawBaseUrl = 'https://digital-contact-manager.onrender.com/api';
+  } else {
+    rawBaseUrl = 'http://localhost:5000/api';
+  }
+}
+
+const API_BASE_URL = rawBaseUrl;
 
 const api = axios.create({
   baseURL: API_BASE_URL,
