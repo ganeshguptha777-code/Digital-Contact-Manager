@@ -1,0 +1,19 @@
+{
+  "name": "digital-contact-manager-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-Stack MERN Digital Contact Manager",
+  "scripts": {
+    "install:server": "npm --prefix server install",
+    "install:client": "npm --prefix client install",
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "test:server": "npm --prefix server test",
+    "test:client": "npm --prefix client test",
+    "build:client": "npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
