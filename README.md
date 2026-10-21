@@ -256,3 +256,8 @@ npm test
 | **Export Contacts** | Click "Download Contacts (.CSV)" to export all your contacts with formula sanitization. |
 | **Import Contacts** | Upload a CSV file, choose duplicate strategy, and review the detailed row summary. |
 | **Settings** | Go to "Settings", update your name or password, and verify changes save. |
+
+
+
+Live Link:https://digital-contact-manager.vercel.app
+
